@@ -4,6 +4,7 @@ using UnityEngine.Rendering;
 
 public class FolloMe : MonoBehaviour
 {
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -15,5 +16,9 @@ public class FolloMe : MonoBehaviour
     {
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
         transform.position = mousePos;
+
+
+        
+
     }
 }
