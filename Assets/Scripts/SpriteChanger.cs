@@ -5,6 +5,10 @@ public class SpriteChanger : MonoBehaviour
 {
     public SpriteRenderer spriteRenderer;
     public Color col;
+    public Sprite mySprite;
+    //public List <Sprite> barrels;     (you can add and subtract from lists while the game is running)
+    //public Sprite[] barrels;
+    public int randomNumber;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -17,11 +21,18 @@ public class SpriteChanger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //      LISTS
+        //name of list.add/remove/etc(thing to add or remove)
+
+
+        //      RANDOM COLOR FUNCTION CALL
 
         /*if (Keyboard.current.anyKey.wasPressedThisFrame)
         {
             PickARandomColor();
         }*/
+
+        //      ROLLOVER
 
         //get mousepos
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
@@ -38,13 +49,28 @@ public class SpriteChanger : MonoBehaviour
             spriteRenderer.color = Color.white;
         }
 
+        //      KEYBOARD CLICK SPRITE CHANGE SPRITE CALL
+
+        if (Keyboard.current.anyKey.wasPressedThisFrame)
+        {
+            PickARandomSprite();
+        }
+
     }
 
-    //making function
     void PickARandomColor()
     {
         //spriteRenderer.color = Color.red;
         spriteRenderer.color = Random.ColorHSV();
         
+    }
+
+    void PickARandomSprite()
+    {
+        //pick a random number
+        randomNumber = Random.Range(0, barrels.Length);
+
+        //use that number to choose and assign a sprite
+        spriteRenderer.sprite = barrels[randomNumber];
     }
 }
