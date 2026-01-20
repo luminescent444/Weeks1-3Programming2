@@ -6,9 +6,13 @@ public class SpriteChanger : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public Color col;
     public Sprite mySprite;
-    //public List <Sprite> barrels;     (you can add and subtract from lists while the game is running)
     public Sprite[] barrels;
     public int randomNumber;
+
+    //      LISTS AND INTERSCRIPT COMMUNICATION
+
+    //public List <Sprite> barrels;     (you can add and subtract from lists while the game is running)
+    //public RotateMe rotateMe;         (allows you to interface with another script's variables. set them by doing "rotateMe.speed = value" (script variable.variable in script to change = value) in update
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
