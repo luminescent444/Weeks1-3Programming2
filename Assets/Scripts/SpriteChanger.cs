@@ -7,7 +7,7 @@ public class SpriteChanger : MonoBehaviour
     public Color col;
     public Sprite mySprite;
     //public List <Sprite> barrels;     (you can add and subtract from lists while the game is running)
-    //public Sprite[] barrels;
+    public Sprite[] barrels;
     public int randomNumber;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
