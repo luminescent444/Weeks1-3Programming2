@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class linInt : MonoBehaviour
+/*public class linInt : MonoBehaviour
 {
     public Transform start;
     public Transform end;
@@ -27,3 +27,4 @@ public class linInt : MonoBehaviour
 
     }
 }
+*/
