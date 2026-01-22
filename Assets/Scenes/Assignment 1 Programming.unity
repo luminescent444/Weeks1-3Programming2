@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 21448195}
   - component: {fileID: 21448194}
   m_Layer: 0
-  m_Name: AdobeStock_744813507 1_0
+  m_Name: Pipe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -588,7 +588,7 @@ GameObject:
   - component: {fileID: 560340672}
   - component: {fileID: 560340671}
   m_Layer: 0
-  m_Name: AdobeStock_369250586_0
+  m_Name: Table
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -675,7 +675,7 @@ GameObject:
   - component: {fileID: 873201467}
   - component: {fileID: 873201466}
   m_Layer: 0
-  m_Name: AdobeStock_564111458_0
+  m_Name: Banners
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -762,7 +762,7 @@ GameObject:
   - component: {fileID: 946786449}
   - component: {fileID: 946786448}
   m_Layer: 0
-  m_Name: AdobeStock_503320505_0
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1744,7 +1744,7 @@ GameObject:
   - component: {fileID: 1339078597}
   - component: {fileID: 1339078596}
   m_Layer: 0
-  m_Name: AdobeStock_1716194220_0
+  m_Name: Bear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1918,7 +1918,7 @@ GameObject:
   - component: {fileID: 1500164440}
   - component: {fileID: 1500164439}
   m_Layer: 0
-  m_Name: AdobeStock_1768427152_0
+  m_Name: Progress Meter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2123,7 +2123,7 @@ GameObject:
   - component: {fileID: 1736747953}
   - component: {fileID: 1736747952}
   m_Layer: 0
-  m_Name: AdobeStock_756707286_0
+  m_Name: Finish Line (pipe)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2210,7 +2210,7 @@ GameObject:
   - component: {fileID: 1806515470}
   - component: {fileID: 1806515469}
   m_Layer: 0
-  m_Name: AdobeStock_756707286_0 (1)
+  m_Name: Finish Line (progress meter)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2297,7 +2297,7 @@ GameObject:
   - component: {fileID: 1841529681}
   - component: {fileID: 1841529680}
   m_Layer: 0
-  m_Name: AdobeStock_417863966_0
+  m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
