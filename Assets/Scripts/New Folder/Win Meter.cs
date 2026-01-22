@@ -17,13 +17,18 @@ public class WinMeter : MonoBehaviour
     {
         //the water meter's x = the controller's y -8
 
-        //waterController.position.y = currentControllerPos;
-        meter = transform.position;
+        if(transform.position.x < -3)
+        {
 
-        meter.x = (currentControllerPos.y);
-        meter = transform.position;
+            currentControllerPos = waterController.position;
+            meter = transform.position;
 
-        
+            meter.x = (currentControllerPos.y - 12);
+            transform.position = meter;
+
+        }
+
+
         /*currentControllerPos = transform.position;
         currentControllerPos.y = waterController.position.y;
         transform.position = currentControllerPos;*/

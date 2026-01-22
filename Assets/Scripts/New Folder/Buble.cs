@@ -7,12 +7,14 @@ public class Buble : MonoBehaviour
     public float t;
     public Transform start;
     public Transform end;
-    public Vector2 startpos;
+    public Vector2 startPos;
+    public Vector2 endPos;
+    public float randomX;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        startpos.y = -2;
+        
     }
 
     // Update is called once per frame
@@ -23,8 +25,20 @@ public class Buble : MonoBehaviour
         if (t > 1)
         {
             t = 0;
+
+            startPos = start.position;
+            endPos = end.position;
+
+            randomX = Random.Range(-0.3f,0.3f);
+
+            startPos.x = randomX;
+            endPos.x = randomX;
+
+            start.position = startPos;
+            end.position = endPos;
+
         }
 
-        transform.position = Vector2.Lerp(startpos, end.position, curve.Evaluate(t));
+        transform.position = Vector2.Lerp(start.position, end.position, curve.Evaluate(t));
     }
 }
