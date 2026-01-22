@@ -3,42 +3,51 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using static UnityEngine.GraphicsBuffer;
-
+//SCRIPT TO VIBRATE THE CURSOR WHEN ITS SHOOTING
 public class CursorVibrate : MonoBehaviour
 {
 
-    //declare variables
+    //INITIALIZING VARIABLES
+
+    //float to control time
     public float t;
+
+    //float to hold distance value
     public float distance;
-    public Vector2 target;
+
+    //curve to create the vibration
     public AnimationCurve curve;
+
+    //float to hold the curve value to change the scale with
     public float currentCurve;
+
+    //float to hold the default scale values
     public Vector3 startScale;
-    //public AnimationCurve lerpCurve;
-    //public Transform startPoint;
-    //public Transform endPoint;
+ 
+    //transform to allow access to the target's location
     public Transform targetTransform;
+
+    //vector to hold the location of the target transform
     public Vector3 targetPos;
+
+    //transform to allow access to the watermeter controller's values
     public Transform waterMeter;
+
+    //to hold the controller's position
     public Vector3 waterMeterPos;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        //set target vector with the targets values
-        //target.x = 0;
-        //target.y = -3;
-
-        //set the scale vector with correct scale values
+     
+        //set the scale vector with the default scale values
         startScale.x = 0.03f;
         startScale.y = 0.03f;
 
     }
 
-    // Update is called once per frame
     void Update()
     {
-
+        //set the target position vector equal to the current target position
         targetPos = targetTransform.position;
 
         //update the current time
@@ -48,33 +57,38 @@ public class CursorVibrate : MonoBehaviour
             t = 0;
         }
 
-        //move the target location
-        //target = Vector2.Lerp(startPoint.position, endPoint.position, lerpCurve.Evaluate(t));
-
         //get mouse position in meters
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
 
-        //get distance between circle and mouse
+        //get distance between the target and mouse
         distance = Vector3.Distance(targetTransform.position, mousePos);
 
-        //"add the current time to a "t" variable"
-        t += Time.deltaTime;
-
-        //read the curve value and set it to a variable
+        //read the curve value and set it to the curve variable
         currentCurve = curve.Evaluate(t);
 
-        //if the cursor is over the target
+        //IF THE CURSOR IS OVER THE TARGET
 
         if (distance < 1)
         {
             //set the scale to the value of the curve 
             transform.localScale = startScale*currentCurve;
+
+            //get the contrller's current position
             waterMeterPos = waterMeter.position;
+
+            //add 0.01 to the controller's height
             waterMeterPos.y += 0.01f;
+
+            //set the watermeter's position = to its position variable
             waterMeter.position = waterMeterPos;
         }
+
+        //IF NOT
+
         else
         {
+
+            //set the scale to its default
             transform.localScale = startScale;
         }
 
